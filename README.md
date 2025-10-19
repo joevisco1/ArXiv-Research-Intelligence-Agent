@@ -88,16 +88,21 @@ The **Supervisor** node governs all tool calls dynamically. It evaluates retriev
 git clone https://github.com/your-username/arxiv-research-agent.git
 cd arxiv-research-agent
 pip install -r requirements.txt
+```
+
 If running in Google Colab:
 
-bash
-Copy code
+```bash
 pip install langgraph langchain openai pinecone-client serpapi python-dotenv
-🚀 Usage
-Run the full reasoning loop:
+```
 
-python
-Copy code
+---
+
+## 🚀 Usage
+
+**Run the full reasoning loop:**
+
+```python
 result = run_pipeline(
     user_input="Summarize recent breakthroughs in single-cell RNA sequencing from q-bio.GN papers.",
     chat_history=[],
@@ -105,38 +110,50 @@ result = run_pipeline(
 )
 
 print(result)
-Generate the human-readable report:
+```
 
-python
-Copy code
+**Generate the human-readable report:**
+
+```python
 report = build_report(result["intermediate_steps"][-1].tool_input)
 print(report)
-🧩 Example Research Workflow
-Supervisor chooses rag_search to retrieve academic papers.
+```
 
-Evaluates the results and calls web_search to enrich with newer publications.
+---
 
-Once sufficient context exists, calls final_answer.
+## 🧩 Example Research Workflow
 
-A complete report is assembled with citations, structured text, and linked sources.
+1. Supervisor chooses `rag_search` to retrieve academic papers.  
+2. Evaluates the results and calls `web_search` to enrich with newer publications.  
+3. Once sufficient context exists, calls `final_answer`.  
+4. A complete report is assembled with citations, structured text, and linked sources.
 
-📚 Citation
+---
+
+## 📚 Citation
+
 If you use this work or extend it, please cite:
 
-bibtex
-Copy code
+```bibtex
 @software{visco2025_arxiv_supervisor_agent,
   author = {Joseph Visco},
   title = {ArXiv Research Supervisor Agent: A LangGraph-based RAG System for Automated Scientific Literature Synthesis},
   year = {2025},
   url = {https://github.com/jvisco/arxiv-research-agent}
 }
-🧑‍💻 Author
-Joseph Visco
-Site Reliability & Data Engineering Specialist • Azure OpenAI • LangGraph R&D
-📍 Farmingdale, NY
-🔗 GitHub • LinkedIn
+```
 
-🧩 License
+---
+
+## 🧑‍💻 Author
+
+**Joseph Visco**  
+Site Reliability & Data Engineering Specialist • Azure OpenAI • LangGraph R&D  
+📍 Farmingdale, NY  
+🔗 [GitHub](https://github.com/jvisco) • [LinkedIn](https://linkedin.com/in/jvisco)
+
+---
+
+## 🧩 License
+
 MIT License © 2025 Joseph Visco
-
