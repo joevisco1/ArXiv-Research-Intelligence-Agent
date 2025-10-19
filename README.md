@@ -82,21 +82,7 @@ The **Supervisor** node governs all tool calls dynamically. It evaluates retriev
 
 ---
 
-## 📦 Installation
 
-```bash
-git clone https://github.com/your-username/arxiv-research-agent.git
-cd arxiv-research-agent
-pip install -r requirements.txt
-```
-
-If running in Google Colab:
-
-```bash
-pip install langgraph langchain openai pinecone-client serpapi python-dotenv
-```
-
----
 
 ## 🚀 Usage
 
