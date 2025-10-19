@@ -69,28 +69,33 @@ The **Supervisor** node governs all tool calls dynamically. It evaluates retriev
     "https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-023-04123-4"
   ]
 }
-🧮 Technologies Used
-Category	Technologies
-Core Framework	LangGraph, LangChain, OpenAI GPT Models
-Vector Store	Pinecone Serverless (Cosine Similarity)
-Data Fetching	ArXiv API, SerpAPI Web Search
-Tool Orchestration	Supervisor Agent with dynamic reasoning
-Visualization	Graphviz Diagram of Workflow
-Environment	Python 3.12, Colab / VS Code, dotenv
+# 🧮 Technologies Used
 
-📦 Installation
-bash
-Copy code
+| **Category** | **Technologies** |
+|---------------|------------------|
+| Core Framework | LangGraph, LangChain, OpenAI GPT Models |
+| Vector Store | Pinecone Serverless (Cosine Similarity) |
+| Data Fetching | ArXiv API, SerpAPI Web Search |
+| Tool Orchestration | Supervisor Agent with dynamic reasoning |
+| Visualization | Graphviz Diagram of Workflow |
+| Environment | Python 3.12, Colab / VS Code, dotenv |
+
+---
+
+## 📦 Installation
+
+```bash
 git clone https://github.com/your-username/arxiv-research-agent.git
 cd arxiv-research-agent
 pip install -r requirements.txt
 If running in Google Colab:
 
-python
+bash
 Copy code
-!pip install langgraph langchain openai pinecone-client serpapi python-dotenv
+pip install langgraph langchain openai pinecone-client serpapi python-dotenv
 🚀 Usage
-Run the full reasoning loop
+Run the full reasoning loop:
+
 python
 Copy code
 result = run_pipeline(
@@ -100,7 +105,8 @@ result = run_pipeline(
 )
 
 print(result)
-Generate the human-readable report
+Generate the human-readable report:
+
 python
 Copy code
 report = build_report(result["intermediate_steps"][-1].tool_input)
@@ -117,7 +123,7 @@ A complete report is assembled with citations, structured text, and linked sourc
 📚 Citation
 If you use this work or extend it, please cite:
 
-java
+bibtex
 Copy code
 @software{visco2025_arxiv_supervisor_agent,
   author = {Joseph Visco},
@@ -127,7 +133,7 @@ Copy code
 }
 🧑‍💻 Author
 Joseph Visco
-Site Reliability & Data Engineering Specialist | Azure OpenAI | LangGraph R&D
+Site Reliability & Data Engineering Specialist • Azure OpenAI • LangGraph R&D
 📍 Farmingdale, NY
 🔗 GitHub • LinkedIn
 
