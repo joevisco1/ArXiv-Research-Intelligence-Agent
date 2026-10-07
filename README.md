@@ -119,6 +119,10 @@ print(report)
 ---
 
 ## 📚 Citation
+Based on:
+
+LangGraph Mastery: Develop LLM Agents with LangGraph on Udemy
+By Andrei Dumitrescu and Crystal Mind Academy
 
 If you use this work or extend it, please cite:
 
